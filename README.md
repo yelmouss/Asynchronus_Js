@@ -19,8 +19,6 @@ myPromise.then((data) => {
 Consuming Promises
 Pour consommer une promesse, vous utilisez la méthode .then() pour spécifier ce qui doit se produire lorsque la promesse est résolue (avec succès) et la méthode .catch() pour gérer les erreurs.
 
-javascript
-Copy code
 myPromise
   .then((data) => {
     console.log(data);
@@ -31,8 +29,6 @@ myPromise
 Queuing Promises
 Vous pouvez mettre en file d'attente des promesses pour qu'elles s'exécutent séquentiellement en chaînant les méthodes .then().
 
-javascript
-Copy code
 const promise1 = new Promise((resolve, reject) => {
   setTimeout(() => {
     resolve("Première tâche terminée");
@@ -56,8 +52,6 @@ promise1
 Creating Promises
 Vous pouvez créer vos propres promesses pour encapsuler des opérations asynchrones personnalisées.
 
-javascript
-Copy code
 function fetchData() {
   return new Promise((resolve, reject) => {
     // Code pour récupérer des données de manière asynchrone
@@ -68,8 +62,6 @@ function fetchData() {
 Iterating with Async / Await
 async/await est un moyen de rendre le code asynchrone plus lisible et plus proche de la syntaxe synchrone.
 
-javascript
-Copy code
 async function fetchData() {
   try {
     const data = await myPromise;
@@ -78,11 +70,12 @@ async function fetchData() {
     console.error(error);
   }
 }
+
+
 Error Handling in JavaScript
 La gestion des erreurs en JavaScript est essentielle pour gérer les erreurs de manière efficace et maintenir la fiabilité de votre application.
 
-javascript
-Copy code
+
 try {
   // Code potentiellement problématique
   throw new Error("Une erreur s'est produite");
@@ -91,4 +84,5 @@ try {
 } finally {
   // Code exécuté quelle que soit l'issue du bloc try-catch
 }
+
 En comprenant ces concepts et en les appliquant, vous serez en mesure de créer des applications JavaScript robustes et efficaces, capables de gérer des opérations asynchrones et de gérer les erreurs de manière appropriée.
