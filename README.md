@@ -85,4 +85,7 @@ try {
   // Code exécuté quelle que soit l'issue du bloc try-catch
 }
 
-En comprenant ces concepts et en les appliquant, vous serez en mesure de créer des applications JavaScript robustes et efficaces, capables de gérer des opérations asynchrones et de gérer les erreurs de manière appropriée.
+En comprenant ces concepts et en les appliquant, vous serez en mesure de créer
+des applications JavaScript robustes et efficaces, capables de gérer des opérations
+ asynchrones et de gérer les erreurs de manière appropriée.
+```

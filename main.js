@@ -14,6 +14,7 @@ const myPromise = new Promise((resolve, reject) => {
   }, 1000);
 });
 
+
 myPromise.then((data) => {
   console.log(data); // Affiche : Données récupérées avec succès
 });
@@ -62,6 +63,20 @@ function fetchData() {
     // Code pour récupérer des données de manière asynchrone
     // Si les données sont récupérées avec succès, appeler resolve()
     // Sinon, appeler reject()
+  });
+}
+
+async function fetchDataFromAPI() {
+  return new Promise((resolve, reject) => {
+    // Simuler un délai de 1 seconde pour la requête API
+    setTimeout(() => {
+      const success = Math.random() < 0.5; // Simuler aléatoirement le succès ou l'échec de la requête
+      if (success) {
+        resolve("Données récupérées de l'API");
+      } else {
+        reject("Erreur lors de la récupération des données de l'API");
+      }
+    }, 1000);
   });
 }
 

@@ -111,3 +111,21 @@ parallelCalls(urls);
 
 // Cette fonction effectue plusieurs appels API en parallèle en utilisant Promise.all() avec la méthode map,
 //  puis logue les réponses une fois que tous les appels sont terminés.
+
+
+
+async function waitCall() {
+  try {
+    const response = await fetch('https://jsonplaceholder.typicode.com/posts');
+    if (!response.ok) {
+      throw new Error('Impossible de récupérer les données de l\'API');
+    }
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Une erreur s\'est produite lors de la récupération des données:', error);
+  }
+}
+
+// Exemple d'utilisation :
+waitCall();
